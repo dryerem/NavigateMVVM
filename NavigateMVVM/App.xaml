@@ -2,8 +2,15 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:NavigateMVVM"
-             StartupUri="MainWindow.xaml">
+             xmlns:viewmodels="clr-namespace:NavigateMVVM.ViewsModels"
+             xmlns:views="clr-namespace:NavigateMVVM.Views"
+             StartupUri="Views/MainWindow.xaml">
     <Application.Resources>
-         
+        <DataTemplate DataType="{x:Type viewmodels:HomeViewModel}">
+            <views:HomeView/>
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:SecondViewModel}">
+            <views:SecondView/>
+        </DataTemplate>
     </Application.Resources>
 </Application>
